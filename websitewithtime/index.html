@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dates</title>
+  
+</head>
+<style>
+      .container {
+        font-size: 23px; 
+        background-color: orange;
+        border: 2px solid palevioletred;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #time {
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="container">
+        Website created by Lakshika siddhu with time and date. 
+        Current time is <span id="time"></span>
+    </div>
+    <script>
+   
+        console.log("This is date and time in javascript");
+        let now = new Date();
+        console.log(now);
+
+        let dt = new Date(2000);
+        console.log(dt);
+
+        //let newDate = new Date("1997-10-27")
+        //console.log(newDate);
+        //let newDate = new Date("2003-04-21")
+        //console.log(newDate);
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate = new Date(2008, 3, 6, 8, 4, 8, 45);
+        console.log(newDate);
+
+
+        let yr = newDate.getFullYear();
+        console.log("This year is ", yr);
+
+        let dat = newDate.getDate();
+        console.log("This date is ", dat);
+
+        let month = newDate.getMonth();
+        console.log("This month is ", month);
+
+        let sec = newDate.getSeconds();
+        console.log("This seconds is ", sec);
+
+        newDate.setDate(32);
+
+        newDate.setHours(8);
+        console.log(newDate)
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+    </script>
+</body>
+
+</html>
